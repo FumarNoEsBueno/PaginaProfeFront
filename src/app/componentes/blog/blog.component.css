@@ -1,0 +1,11 @@
+.contenedor {
+  display: flex; /* Establece el contenedor como un flexbox */
+}
+
+.div {
+  flex: 1; /* Hace que cada div ocupe un porcentaje igual del contenedor */
+}
+
+.boton {
+  justify-content: flex-end;
+}

@@ -1,0 +1,30 @@
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+  background: lightgrey; /* Fondo semitransparente para legibilidad */
+}
+
+.contenedor {
+  width: 100%;       /* ancho del recorte */
+  height: 500px;      /* alto del recorte */
+  overflow: hidden;
+  position: relative;
+}
+
+.imagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+

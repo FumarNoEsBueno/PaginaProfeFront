@@ -1,0 +1,33 @@
+<br>
+<div [style.backgroundColor]="''"
+  [style.color]="'black'"
+  [style.paddingTop]="'1px'"
+  [style.paddingLeft]="'10px'"
+  [style.paddingBottom]="'10px'"
+  [style.borderRadius]="'10px'">
+
+  <h1>
+    {{titulo}}
+  </h1>
+  <p-divider />
+  @for (item of testData; track item; let index = $index) {
+    <div style="display:flex">
+      <p style="flex:1; font-size:20px">
+        {{item.title}}
+      </p>
+      <p style="flex:1; font-size:20px">
+        {{item.subtitle}}
+      </p>
+      <p style="justify-content: flex-end">
+        <p-button size="small" (onClick)="showModal(index)">
+          Detalles
+        </p-button>
+      </p>
+    </div>
+    <p-divider />
+  }
+</div>
+
+<p-dialog header="{{testData[moduloCargado].title}}" [(visible)]="mostrarDialog">
+      <div class="mt-0 font-semibold text-xl">{{testData[moduloCargado].body}}</div>
+</p-dialog>

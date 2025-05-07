@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Borde derecho solo para la columna izquierda */
+.grid-item:nth-child(2n+1) {
+  border-right: 1px solid #ccc;
+}
+
+/* Borde inferior para todos los elementos que NO están en la última fila */
+.grid-item {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Quitar borde inferior de los últimos dos elementos si son los únicos en la última fila */
+.grid-item:nth-last-child(-n+2):nth-child(2n-1),
+.grid-item:nth-last-child(-n+2):nth-child(2n) {
+  border-bottom: none;
+}
+

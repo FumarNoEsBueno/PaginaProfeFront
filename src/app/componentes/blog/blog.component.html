@@ -1,0 +1,36 @@
+<h1>
+  {{testTitulo}}
+</h1>
+
+<div class="contenedor">
+@for (item of testData; track item; let index = $index) {
+  <div class="div">
+    <div>
+    <h2 class="mb-4 font-medium">{{ item.name }}</h2>
+      <div style="width: 90%;
+        height: 200px;
+        overflow: hidden;
+        background: lightgrey;
+        position: relative">
+        <img
+        style="
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        max-width: 150%;
+        max-height: 150%;"
+        [src]="item.image"
+        [alt]="item.name"
+        class="w-full rounded-border" />
+      </div>
+    </div>
+    <div style="width: 90%;">
+      <div class="mt-0 font-semibold text-xl">{{ item.body.substring(0, 150) + '...' }}</div>
+    <div style="display: flex; justify-content: flex-end;">
+      <p-button size="small" label="Detalles" />
+    </div>
+    </div>
+  </div>
+}
+</div>

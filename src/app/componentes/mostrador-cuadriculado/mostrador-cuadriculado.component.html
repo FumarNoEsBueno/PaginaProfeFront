@@ -1,0 +1,25 @@
+<div style="text-align:center">
+  <h2>
+    {{title}}
+  </h2>
+  <h4>
+    {{subTitle}}
+  </h4>
+
+  <div class="grid-container">
+  @for (item of testData; track item; let index = $index) {
+    <div class="grid-item">
+        <p style="flex:1; font-size:20px">
+          {{item.title}}
+        </p>
+        <p style="flex:1; font-size:15">
+          {{item.subTitle}}
+        </p>
+        <p style="flex:1;margin-left:10%;margin-right:10%">
+          {{item.body.substring(0, 150) + '...' }}
+        </p>
+    </div>
+    }
+  </div>
+</div>
+
